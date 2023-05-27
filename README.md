@@ -5,6 +5,9 @@
 Europilot is an open source project that leverages the popular Euro Truck Simulator(ETS2) to develop self-driving algorithms.
 This fork add option to use Playstation 3 and Thrustmaster f430,  and extends PilotNet models by prepocessing frames with LaneUnet.
 
+[Lane detection demo.](https://www.youtube.com/watch?v=vuc_wN2WxZY)
+[PilotNET with lane line detection driving demo video.](https://www.youtube.com/watch?v=XLz8AMu_QlQ)
+
 Extensions can be seen on figure:
 <div align = 'center'>
 	<img src = 'examples/Overview.png'>
