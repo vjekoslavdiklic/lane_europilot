@@ -49,9 +49,23 @@ class Config(object):
     DATA_PATH = os.path.join('data', 'csv')
     IMG_PATH = os.path.join('data', 'img', 'raw')
     IMG_EXT = 'jpg'
+    if not os.access(DATA_PATH, os.W_OK):
+        folders2add = DATA_PATH.split('/')
+        last=''
+        for each in folders2add:
+            if not os.access(last+each, os.W_OK):
+                os.mkdir(last+each)
+            last = last+each+'/'
+    if not os.access(IMG_PATH, os.W_OK):
+        folders2add = IMG_PATH.split('/')
+        last=''
+        for each in folders2add:
+            if not os.access(last+each, os.W_OK):
+                os.mkdir(last+each)
+            last = last+each+'/'
     TRAIN_UID = None
     DEFAULT_FPS = 10
-    WAIT_KEYPRESS = False
+    WAIT_KEYPRESS = True
     DEBUG = True
 
 

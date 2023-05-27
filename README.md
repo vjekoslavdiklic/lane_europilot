@@ -1,13 +1,20 @@
-# europilot
+#Extended europilot
 
 ## Overview
 
 Europilot is an open source project that leverages the popular Euro Truck Simulator(ETS2) to develop self-driving algorithms.
+This fork add option to use Playstation 3 and Thrustmaster f430,  and extends PilotNet models by prepocessing frames with LaneUnet.
 
-![alt tag](examples/day.gif)
-![alt tag](examples/night.gif)
+Extensions can be seen on figure:
+<div align = 'center'>
+	<img src = 'examples/Overview.png'>
+</div>	
+
+Demo video:
+
+![alt tag](examples/ets2_Pilotnet4ch_part1.gif)
 <p align = 'center'>
-A convolutional neural network (CNN) controls the steering wheel inside ETS2.
+Convolutional neural network (CNN) PilotNet with LaneUnet Preprocessing by LaneUnet controls the steering wheel inside ETS2.
 </p>
 
 Think of europilot as a bridge between the game environment, and your favorite deep-learning framework, such as Keras or Tensorflow. With europilot, you can capture the game screen input, and programmatically control the truck inside the simulator. 
@@ -27,6 +34,9 @@ For testing, europilot can create a virtual joystick driver that can be recogniz
 [Click to see an example demo on YouTube.](https://www.youtube.com/watch?v=n2pPR3WLaxI)
 
 [Click to read a blog post on our motivation behind the project.](https://medium.com/mars-auto/create-self-driving-trucks-inside-euro-truck-simulator-2-c64424d528ed)
+
+
+
 
 ## Getting Started
 

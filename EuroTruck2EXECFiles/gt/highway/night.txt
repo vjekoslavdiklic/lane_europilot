@@ -1,0 +1,5 @@
+g_set_time 0
+g_traffic 0
+g_set_weather 0 f
+g_fatigue 0
+goto 19707;34;21021.1;-0.82;-0.3

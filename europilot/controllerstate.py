@@ -28,7 +28,7 @@ class ControllerOutput(object):
 
         # XXX: This `python` may not be our desired python bin
         self.p = Popen(
-            ['python', '-u', os.path.join(dir_path, 'joystick.py')],
+            ['python3.10', '-u', os.path.join(dir_path, 'joystickF430.py')],#['python3.10', '-u', os.path.join(dir_path, 'joystick.py')],
             bufsize=0,
             stdout=PIPE,
             close_fds=ON_POSIX
@@ -101,8 +101,8 @@ class ControllerState(object):
     def update_state(self, msg):
         """Update ControllerState with the latest controller data"""
         k, v = msg.split()
-        if k in self.state:
-            self.state[k] = v
+        if k.decode() in self.state:
+            self.state[k.decode()] = v.decode()
 
     def get_state(self):
         """Returns the latest state"""
@@ -140,8 +140,10 @@ class SensorData(object):
 
     @property
     def resume_button_pressed(self):
-        return self._data['wheel-button-right-1'] == '1'
+        return self._data['wheel-button-right-1'] == '1' #square
+        #return self._data['wheel-button-right-1'] == '1'  # square
 
     @property
     def pause_button_pressed(self):
-        return self._data['wheel-button-left-1'] == '1'
+        return self._data['wheel-button-left-1'] == '1' #right thumb
+        #return self._data['wheel-button-left-1'] == '1'  # right thumb
